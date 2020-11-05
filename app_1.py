@@ -1,7 +1,5 @@
 import os
-from flask import (
-    Flask, flash, render_template, redirect, request, session, url_for)
-
+from flask import Flask
 if os.path.exists("env.py"):
     import env
 
@@ -15,12 +13,8 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_tasks')
-
-
-def get_tasks():
-    tasks=mongo.db.tasks.find()
-    return render_template("tasks.html", tasks=tasks)
+def hello():
+    return 'Hello world'
 
 
 if __name__ == '__main__':
