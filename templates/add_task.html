@@ -3,12 +3,13 @@
 <h3 class="light-green-text text-darken-4 center-align">Add Task</h3>
 
 <div class="row card-panel grey lighten-5">
-  <form class="col s12" method="POST" action="">
+  <form class="col s12" method="POST" action="{{ url_for('add_task') }}">
+    <!-- category selection -->
     <div class="row">
       <div class="input-field col s12">
               <i class="fas fa-folder-open prefix light-green-text text-darken-4"></i>
 
-        <select id="category_name" name="category_name class="validate required">
+        <select id="category_name" name="category_name" class="validate required">
           <option value="" disabled selected>Choose Category</option>
             {% for category in categories %}
                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -18,6 +19,7 @@
         
       </div>
     </div>
+    <!-- task name -->
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-pencil-alt prefix light-green-text text-darken-4"></i>
@@ -33,6 +35,7 @@
         <label for="task_name">Task Name</label>
       </div>
     </div>
+    <!-- task description -->
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-align-left prefix light-green-text text-darken-4"></i>
@@ -47,6 +50,7 @@
         <label for="task_name">Task Description</label>
       </div>
     </div>
+    <!-- due date -->
     <div class="row">
       <div class="input-field col s12">
         <i
@@ -62,7 +66,7 @@
         <label for="due_date">Due date</label>
       </div>
     </div>
-
+    <!-- is urgent -->
     <div class="row">
       <div class="input-field col s12">
         <div class="switch">
@@ -76,6 +80,15 @@
           </label>
         </div>
       </div>
+    </div>
+    <!-- submit button -->
+    <div class="row">
+    <div class="col s12 center-align">
+        <button class="btn-large light-green darken-1 text-shadow" type="submit" name="">Add Tasks
+        <i class="fas fa-plus-square right"></i>
+        </button>
+    </div>
+        
     </div>
   </form>
 </div>
