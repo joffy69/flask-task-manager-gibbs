@@ -1,3 +1,5 @@
-couldn't find one small error
+wire up task edit button
 
-in the db, the key is create_by not created_by
+another small error - remember
+that the variable in a for loop
+can be anything ie task in tasks
