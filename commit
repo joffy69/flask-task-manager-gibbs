@@ -1,4 +1,5 @@
-bind data to the edit task form
+Update task into db
 
-about one tab of white space is
-appearing to left of category
+i've noticed that the app
+throws an error if you don't
+login (keyerror 'user')
