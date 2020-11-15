@@ -1,5 +1,4 @@
-Update task into db
+Add option to add category
 
-i've noticed that the app
-throws an error if you don't
-login (keyerror 'user')
+my categories are not in alphabetic
+order - maybe formatting?
